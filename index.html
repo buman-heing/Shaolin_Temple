@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shaolin Temple Cultural Centre Zambia | Lusaka</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "tertiary": "#000000",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#281800",
+                    "tertiary-fixed-dim": "#f0be72",
+                    "inverse-surface": "#30312d",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f3f1eb",
+                    "surface-container": "#f0eee8",
+                    "on-background": "#1b1c19",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#e4e2dd",
+                    "surface-bright": "#fbf9f3",
+                    "secondary": "#5e5e5b",
+                    "outline-variant": "#c4c7c7",
+                    "primary-container": "#1c1b1b",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#858383",
+                    "inverse-primary": "#c8c6c5",
+                    "on-surface": "#1b1c19",
+                    "surface": "#fbf9f3",
+                    "tertiary-fixed": "#ffddaf",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dcdad4",
+                    "primary": "#000000",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e4e2dd",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fbf9f3",
+                    "surface-variant": "#e4e2dd",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#63635f",
+                    "secondary-container": "#e1dfdb",
+                    "on-surface-variant": "#444748",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-tertiary-fixed": "#281800",
+                    "surface-container-high": "#eae8e2",
+                    "outline": "#747878",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary-container": "#a67c37",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-container-low": "#f6f3ee",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-tertiary-fixed-variant": "#614000",
+                    "shaolin-red": "#a4231c",
+                    "shaolin-gold": "#d4a32c"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "margin-mobile": "24px",
+                    "unit": "8px",
+                    "section-gap": "160px",
+                    "margin-desktop": "80px",
+                    "gutter": "32px"
+                },
+                "fontFamily": {
+                    "display-xl-mobile": ["Playfair Display"],
+                    "display-xl": ["Playfair Display"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+                },
+                "fontSize": {
+                    "display-xl-mobile": ["44px", { "lineHeight": "50px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "display-xl": ["76px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                    "body-lg": ["19px", { "lineHeight": "31px", "fontWeight": "400" }],
+                    "headline-md": ["30px", { "lineHeight": "38px", "fontWeight": "600" }],
+                    "headline-lg-mobile": ["36px", { "lineHeight": "42px", "fontWeight": "600" }],
+                    "headline-lg": ["46px", { "lineHeight": "54px", "fontWeight": "600" }]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+        background-color: theme('colors.background');
+        color: theme('colors.on-surface');
+        -webkit-font-smoothing: antialiased;
+    }
+    html { scroll-behavior: smooth; }
+    .gallery-bg { background-color: theme('colors.surface-container-low'); }
+    .hairline-border { border: 1px solid theme('colors.outline-variant'); border-opacity: 0.2; }
+</style>
+</head>
+<body class="font-body-md text-body-md">
+
+<!-- TopNavBar -->
+<nav class="bg-transparent text-on-primary absolute top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6">
+    <div class="font-headline-md text-[22px] font-bold tracking-tight text-on-primary">
+        <a href="#">SHAOLIN ZAMBIA</a>
+    </div>
+    <ul class="hidden md:flex space-x-gutter items-center">
+        <li><a class="font-label-caps text-label-caps tracking-[0.15em] uppercase text-on-primary border-b border-on-primary pb-1" href="#story">Story</a></li>
+        <li><a class="font-label-caps text-label-caps tracking-[0.15em] uppercase text-on-primary/70 hover:text-on-primary transition-colors duration-300" href="#training">Training</a></li>
+        <li><a class="font-label-caps text-label-caps tracking-[0.15em] uppercase text-on-primary/70 hover:text-on-primary transition-colors duration-300" href="#gallery">Gallery</a></li>
+        <li><a class="font-label-caps text-label-caps tracking-[0.15em] uppercase text-on-primary/70 hover:text-on-primary transition-colors duration-300" href="#community">Community</a></li>
+        <li><a class="font-label-caps text-label-caps tracking-[0.15em] uppercase text-on-primary/70 hover:text-on-primary transition-colors duration-300" href="#visit">Visit</a></li>
+    </ul>
+    <div class="hidden md:block">
+        <a class="font-label-caps text-label-caps tracking-[0.15em] uppercase px-6 py-3 bg-on-primary text-primary hover:opacity-85 transition-opacity" href="#join">Enrol a Child</a>
+    </div>
+    <button class="md:hidden text-on-primary p-2">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
+</nav>
+
+<!-- 1. Hero -->
+<header class="relative w-full h-screen flex flex-col justify-end pb-margin-desktop px-margin-mobile md:px-margin-desktop">
+    <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover" src="assets/49130.jpg" alt="Shaolin disciples in white training uniforms perform a staff-form drill in unison in the courtyard of the Shaolin Temple Cultural Centre, Lusaka, with the red and gold entrance gate behind them." />
+        <!-- Full-coverage scrim: darkens the whole frame evenly, not just the bottom, so text stays legible regardless of what's behind it -->
+        <div class="absolute inset-0 bg-black/45"></div>
+        <!-- Extra weight directly behind the text block -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/25"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl">
+        <span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-shaolin-gold mb-5 block drop-shadow-md">Lusaka, Zambia · Est. 2021</span>
+        <h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-white mb-6 drop-shadow-lg">
+            Shaolin Kung Fu,<br/>taught in Zambia.
+        </h1>
+        <p class="font-body-lg text-body-lg text-white/90 max-w-2xl drop-shadow-md">
+            A cultural centre outside Lusaka where Zambian children and adults train in traditional Chinese martial arts, language, and discipline. It was built in partnership with the Songshan Shaolin Temple in Henan, China.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a class="px-8 py-4 bg-shaolin-red text-white font-label-caps text-label-caps uppercase tracking-widest hover:bg-shaolin-red/90 transition-colors text-center" href="#visit">Plan a Visit</a>
+            <a class="px-8 py-4 border border-white text-white font-label-caps text-label-caps uppercase tracking-widest hover:bg-white/10 transition-colors text-center" href="#join">Enrol a Child</a>
+        </div>
+    </div>
+</header>
+
+<!-- 2. What This Is -->
+<section id="story" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <div class="md:col-span-4">
+            <h3 class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-shaolin-red mb-4 border-b-2 border-shaolin-red pb-3 inline-block">Our Story</h3>
+            <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary leading-tight mt-2">
+                The first Shaolin cultural centre in Africa.
+            </h2>
+        </div>
+        <div class="md:col-span-7 md:col-start-6">
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                Construction began in 2019 and finished in 2021. The centre opened in Ngwerere, just outside Lusaka, as a joint project between China's Songshan Shaolin Temple and Hua'an Zambia, a Chinese-run company based in the country.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Four monks travelled from Songshan to teach here full-time. Today the centre is led by Headmaster Yan Lun, alongside Master Yan Ming. Many in Zambia know him as Max Yollando, a martial artist originally from Côte d'Ivoire who trained at Songshan for six years before taking up his post in Lusaka.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+                Students learn Shaolin kung fu, Mandarin, and traditional Chinese culture. Since opening, the centre has also taken in orphaned and vulnerable children alongside its paying students. For them, it is both a school and a home.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Training -->
+<section id="training" class="py-section-gap px-margin-mobile md:px-margin-desktop gallery-bg">
+    <div class="mb-16 max-w-2xl">
+        <h3 class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-on-surface-variant mb-4">Training</h3>
+        <h2 class="font-headline-md text-headline-md text-primary mb-4">What a day at the centre looks like</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+            Mornings start early with forms practice in the courtyard. Classes follow in kung fu, Mandarin, and academic study. Afternoons bring drills, football, and the everyday routine of a place where dozens of children live and train together.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <!-- Large Focus Image -->
+        <div class="md:col-span-7 flex flex-col">
+            <div class="flex-grow min-h-[600px] bg-surface-container relative group overflow-hidden">
+                <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/49128.jpg" alt="A group of young Shaolin students at the Zambia Cultural Centre pose in martial arts stances in the courtyard, some in yellow training uniforms and some in white, with the temple's red and gold pagoda buildings behind them." />
+            </div>
+            <div class="mt-4 flex justify-between items-baseline border-b border-outline-variant/30 pb-4">
+                <span class="font-headline-md text-headline-md text-primary">Forms Practice</span>
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Morning Courtyard Session</span>
+            </div>
+        </div>
+        <!-- Stacked Smaller Images -->
+        <div class="md:col-span-5 flex flex-col gap-gutter">
+            <div class="flex-grow relative group overflow-hidden bg-surface-container min-h-[280px]">
+                <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/49130.jpg" alt="Shaolin disciples in white uniforms perform a synchronized staff-form line drill at the centre's main gateway in Lusaka, Zambia." />
+            </div>
+            <div class="mt-2 flex justify-between items-baseline border-b border-outline-variant/30 pb-4">
+                <span class="font-headline-md text-headline-md text-primary">Group Drill</span>
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Staff Form</span>
+            </div>
+            <div class="flex-grow relative group overflow-hidden bg-surface-container-high min-h-[280px] flex items-center justify-center">
+                <div class="text-center px-8">
+                    <span class="material-symbols-outlined text-[40px] text-on-surface-variant/50 mb-3 block">language</span>
+                    <p class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Mandarin & Culture Classroom<br/>Gallery Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="mt-10 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+        Note: replace the placeholder panel above with classroom and Mandarin-lesson photography once sourced from the centre's archive.
+    </p>
+</section>
+
+<!-- 3.5 Gallery / Visual Archive -->
+<section id="gallery" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6">
+        <div class="max-w-xl">
+            <h3 class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-shaolin-red mb-4">Gallery</h3>
+            <h2 class="font-headline-md text-headline-md text-primary mb-4">Life at the centre, in pictures</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+                Photos of training, demonstrations, and daily life at the centre, taken by the people who live and teach there.
+            </p>
+        </div>
+        <div class="flex gap-2 flex-shrink-0">
+            <button class="gallery-filter px-5 py-2 font-label-caps text-label-caps uppercase tracking-wider border border-primary bg-primary text-on-primary" data-filter="all">All</button>
+            <button class="gallery-filter px-5 py-2 font-label-caps text-label-caps uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="training">Training</button>
+            <button class="gallery-filter px-5 py-2 font-label-caps text-label-caps uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="community">Community</button>
+            <button class="gallery-filter px-5 py-2 font-label-caps text-label-caps uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="grounds">Grounds</button>
+        </div>
+    </div>
+
+    <!-- Masonry-style grid. Every image below is lazy-loaded (loading="lazy" + decoding="async"),
+         so only the 3-4 thumbnails in the first viewport are fetched on page load. The rest
+         download only as the visitor scrolls toward them, keeping initial load time unaffected
+         no matter how large this archive eventually grows. -->
+    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <button class="gallery-item group relative overflow-hidden bg-surface-container aspect-[3/4] col-span-1 row-span-2" data-category="training" data-full="assets/49128.jpg">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/49128.jpg" loading="lazy" decoding="async" alt="Young Shaolin students in training poses in the courtyard, Lusaka." />
+        </button>
+        <button class="gallery-item group relative overflow-hidden bg-surface-container aspect-square" data-category="training" data-full="assets/49130.jpg">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/49130.jpg" loading="lazy" decoding="async" alt="Staff-form line drill at the centre's gateway, Lusaka." />
+        </button>
+        <button class="gallery-item group relative overflow-hidden bg-surface-container aspect-square" data-category="grounds" data-full="assets/49127.jpg">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/49127.jpg" loading="lazy" decoding="async" alt="Main hall and courtyard of the cultural centre." />
+        </button>
+        <!-- Placeholder slots. Replace src/data-full with real archive photos as they're sourced.
+             Keep the data-category attribute accurate so filtering stays correct. -->
+        <button class="gallery-item group relative overflow-hidden bg-surface-container-high aspect-square flex items-center justify-center" data-category="community" data-full="">
+            <span class="material-symbols-outlined text-[32px] text-on-surface-variant/40">add_photo_alternate</span>
+        </button>
+        <button class="gallery-item group relative overflow-hidden bg-surface-container-high aspect-square flex items-center justify-center" data-category="community" data-full="">
+            <span class="material-symbols-outlined text-[32px] text-on-surface-variant/40">add_photo_alternate</span>
+        </button>
+        <button class="gallery-item group relative overflow-hidden bg-surface-container-high aspect-square flex items-center justify-center" data-category="training" data-full="">
+            <span class="material-symbols-outlined text-[32px] text-on-surface-variant/40">add_photo_alternate</span>
+        </button>
+    </div>
+
+    <div class="mt-10 text-center">
+        <a href="#" class="inline-flex items-center space-x-2 font-label-caps text-label-caps uppercase tracking-widest text-primary hover:text-shaolin-red transition-colors group">
+            <span>View Full Archive</span>
+            <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+    </div>
+
+    <!-- Simple lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/95 hidden items-center justify-center p-6">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/80 hover:text-white">
+            <span class="material-symbols-outlined text-[36px]">close</span>
+        </button>
+        <img id="lightbox-img" class="max-w-full max-h-full object-contain" src="" alt="Enlarged gallery photo" />
+    </div>
+</section>
+
+<script>
+    // Filtering: pure client-side, no extra requests
+    document.querySelectorAll('.gallery-filter').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.gallery-filter').forEach(b => {
+                b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+                b.classList.add('border-outline-variant', 'text-on-surface-variant');
+            });
+            btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+            btn.classList.remove('border-outline-variant', 'text-on-surface-variant');
+
+            const filter = btn.dataset.filter;
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                const show = filter === 'all' || item.dataset.category === filter;
+                item.style.display = show ? '' : 'none';
+            });
+        });
+    });
+
+    // Lightbox: only swaps the src of one <img>, so opening it never triggers
+    // a fresh network request beyond the already-loaded thumbnail-sized image
+    // unless data-full points to a larger asset.
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const full = item.dataset.full;
+            if (!full) return;
+            lightboxImg.src = full;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        });
+    });
+    document.getElementById('lightbox-close').addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+    });
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+    });
+</script>
+
+<!-- 4. The People -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-5 md:order-2">
+            <h3 class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-on-surface-variant mb-6 border-b border-outline-variant pb-2">The People</h3>
+            <h2 class="font-headline-md text-headline-md text-primary mb-6">A bridge between two cultures</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Master Yan Ming, known to many as Max Yollando, is the only African-born monk teaching at the centre. Raised in Côte d'Ivoire, he travelled to China in 2015 and spent six years training at the Songshan Shaolin Temple before returning to Africa to teach.
+            </p>
+            <blockquote class="font-headline-md text-[22px] leading-snug text-primary border-l-2 border-shaolin-red pl-6 italic mb-6">
+                "The Abbot hoped I could become a bridge between Chinese and African cultures. That's why I came here."
+            </blockquote>
+            <p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Master Yan Ming (Max Yollando)</p>
+        </div>
+        <div class="md:col-span-7 md:order-1 relative">
+            <div class="relative z-10 h-[520px] w-[85%] bg-surface-container">
+                <img class="w-full h-full object-cover" src="assets/49127.jpg" alt="The main hall of the Shaolin Temple Cultural Centre Zambia, a red and gold Chinese-style building with a statue in the courtyard in front, under an overcast sky." />
+            </div>
+            <div class="absolute top-10 left-0 w-3/4 h-[520px] bg-surface-container-high z-0 border border-outline-variant/20"></div>
+        </div>
+    </div>
+    <p class="mt-10 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest md:text-right">
+        Note: swap in a portrait photograph of Master Yan Ming once sourced. The architectural shot above is a placeholder for this slot.
+    </p>
+</section>
+
+<!-- 5. Community Impact -->
+<section id="community" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-tertiary text-on-primary">
+    <div class="max-w-3xl mb-16">
+        <h3 class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-on-primary/70 mb-4">Community</h3>
+        <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-6">More than training</h2>
+        <p class="font-body-lg text-body-lg text-on-primary/80">
+            Since opening, the centre has taken in orphaned and vulnerable children alongside its paying students. They train, study Mandarin, attend school, and play football together.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-16 border-t border-on-primary/20 pt-16">
+        <div>
+            <span class="font-headline-lg text-headline-lg text-tertiary-fixed-dim block mb-3">2021</span>
+            <h4 class="font-headline-md text-[20px] mb-2 text-on-primary">Year the Centre Opened</h4>
+            <p class="font-body-md text-body-md text-on-primary/70 text-sm">Construction ran from 2019 to 2021, opening in December that year in Ngwerere, Lusaka.</p>
+        </div>
+        <div>
+            <span class="font-headline-lg text-headline-lg text-tertiary-fixed-dim block mb-3">4+</span>
+            <h4 class="font-headline-md text-[20px] mb-2 text-on-primary">Resident Monks & Instructors</h4>
+            <p class="font-body-md text-body-md text-on-primary/70 text-sm">Teachers from Songshan Shaolin Temple, including Headmaster Yan Lun and Master Yan Ming, live and teach on site.</p>
+        </div>
+        <div>
+            <span class="font-headline-lg text-headline-lg text-tertiary-fixed-dim block mb-3">Open</span>
+            <h4 class="font-headline-md text-[20px] mb-2 text-on-primary">To All Backgrounds</h4>
+            <p class="font-body-md text-body-md text-on-primary/70 text-sm">Training is open to Zambians and visitors of any nationality. No one community is given priority.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 6. The Grounds -->
+<section class="relative w-full h-[80vh] min-h-[600px]">
+    <img class="w-full h-full object-cover" src="assets/49127.jpg" alt="Wide architectural view of the Shaolin Temple Cultural Centre Zambia's main hall, with its red, gold, and yellow Chinese temple-style roofline, set against an overcast Zambian sky." />
+    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent pt-32 pb-12 px-margin-mobile md:px-margin-desktop">
+        <h3 class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-on-primary/70 mb-3">The Grounds</h3>
+        <p class="font-headline-md text-headline-md text-on-primary max-w-2xl">Built in the architectural style of the Songshan Shaolin Temple, recreated in Ngwerere, Lusaka.</p>
+    </div>
+</section>
+
+<!-- 7. Visit / Join -->
+<section id="visit" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-bright">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <div class="p-10 md:p-14 border border-outline-variant/40">
+            <span class="material-symbols-outlined text-[36px] text-shaolin-red mb-6 block">visibility</span>
+            <h2 class="font-headline-md text-headline-md text-primary mb-4">Plan a Visit</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                The centre welcomes visitors, school groups, and tourists to see training sessions and demonstrations. Get in touch ahead of time to confirm timing.
+            </p>
+            <a class="inline-flex items-center space-x-2 font-label-caps text-label-caps uppercase tracking-widest text-primary hover:text-shaolin-red transition-colors group" href="#contact">
+                <span>Contact for Visit Details</span>
+                <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+        <div id="join" class="p-10 md:p-14 bg-primary text-on-primary">
+            <span class="material-symbols-outlined text-[36px] text-tertiary-fixed-dim mb-6 block">school</span>
+            <h2 class="font-headline-md text-headline-md mb-4">Enrol a Child or Join as an Adult</h2>
+            <p class="font-body-md text-body-md text-on-primary/75 mb-8">
+                Training is open to Zambian children and adults, as well as international students. Reach out to ask about places, fees, and what to bring to a first session.
+            </p>
+            <a class="inline-flex items-center space-x-2 font-label-caps text-label-caps uppercase tracking-widest text-on-primary hover:text-tertiary-fixed-dim transition-colors group" href="#contact">
+                <span>Start an Enquiry</span>
+                <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-surface-container-highest text-on-surface font-body-md text-body-md border-t border-outline-variant grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap w-full">
+    <div class="md:col-span-1 flex flex-col justify-between h-full">
+        <div class="font-headline-md text-[20px] text-primary mb-6">SHAOLIN TEMPLE<br/>CULTURAL CENTRE ZAMBIA</div>
+        <p class="text-sm text-on-surface-variant mt-auto">
+            Ngwerere, Lusaka, Zambia.<br/>
+            Opened December 2021 in partnership with the Songshan Shaolin Temple, Henan, China.
+        </p>
+    </div>
+    <div class="hidden md:block"></div>
+    <div class="md:col-span-1">
+        <h4 class="font-label-caps text-label-caps uppercase tracking-widest mb-6 text-on-surface-variant">Centre</h4>
+        <ul class="space-y-4">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#story">Our Story</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#training">Training</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#community">Community</a></li>
+        </ul>
+    </div>
+    <div class="md:col-span-1">
+        <h4 class="font-label-caps text-label-caps uppercase tracking-widest mb-6 text-on-surface-variant">Get in Touch</h4>
+        <ul class="space-y-4">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#visit">Plan a Visit</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#join">Enrol</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
