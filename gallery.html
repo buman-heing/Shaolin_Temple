@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery: Shaolin Temple Cultural Centre Zambia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "background": "#fbf9f3",
+                    "on-surface": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "surface-container": "#f0eee8",
+                    "surface-container-high": "#eae8e2",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-container-low": "#f6f3ee",
+                    "outline-variant": "#c4c7c7",
+                    "primary": "#000000",
+                    "on-primary": "#ffffff",
+                    "shaolin-red": "#a4231c",
+                    "shaolin-gold": "#d4a32c",
+                    "tertiary-fixed-dim": "#f0be72"
+                },
+                fontFamily: {
+                    "display": ["Playfair Display"],
+                    "body": ["Hanken Grotesk"]
+                },
+                spacing: {
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px",
+                    "gutter": "32px"
+                }
+            }
+        }
+    }
+</script>
+<style>
+    body { background-color: #fbf9f3; color: #1b1c19; -webkit-font-smoothing: antialiased; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+    /* Masonry column layout: pure CSS, no JS layout calculation needed */
+    .masonry {
+        columns: 2;
+        column-gap: 12px;
+    }
+    @media (min-width: 768px) {
+        .masonry { columns: 3; column-gap: 16px; }
+    }
+    @media (min-width: 1280px) {
+        .masonry { columns: 4; column-gap: 16px; }
+    }
+    .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 12px;
+        display: block;
+    }
+    @media (min-width: 768px) {
+        .masonry-item { margin-bottom: 16px; }
+    }
+
+    /* Lightbox */
+    #lightbox { display: none; }
+    #lightbox.open { display: flex; }
+
+    /* Filter active state */
+    .filter-btn.active {
+        background-color: #a4231c;
+        color: white;
+        border-color: #a4231c;
+    }
+
+    /* Fade-in on lazy load */
+    .gallery-img {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    .gallery-img.loaded { opacity: 1; }
+</style>
+</head>
+<body class="font-body">
+
+<!-- Nav -->
+<nav class="bg-background border-b border-outline-variant/40 sticky top-0 z-40 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5">
+    <a href="index.html" class="font-display text-[18px] font-bold tracking-tight text-primary">SHAOLIN ZAMBIA</a>
+    <div class="flex items-center gap-6">
+        <a href="index.html" class="hidden md:inline-flex items-center gap-1 text-xs font-body font-semibold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+            Back to Home
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/shaolintemplezambia" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-on-surface-variant hover:text-shaolin-red transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@zambiashaolintemple" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-on-surface-variant hover:text-shaolin-red transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="px-margin-mobile md:px-margin-desktop pt-16 pb-12 border-b border-outline-variant/40">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <div>
+            <p class="text-xs font-body font-semibold uppercase tracking-[0.2em] text-shaolin-red mb-3">Shaolin Temple Cultural Centre Zambia</p>
+            <h1 class="font-display text-[42px] md:text-[60px] leading-tight font-bold text-primary">Photo Archive</h1>
+            <p class="text-base text-on-surface-variant mt-4 max-w-xl">
+                Training, demonstrations, daily life, and the grounds. Photographed at the centre in Ngwerere, Lusaka.
+            </p>
+        </div>
+        <!-- Filter buttons -->
+        <div class="flex flex-wrap gap-2">
+            <button class="filter-btn active px-5 py-2 text-xs font-body font-semibold uppercase tracking-wider border border-outline-variant transition-colors" data-filter="all">All</button>
+            <button class="filter-btn px-5 py-2 text-xs font-body font-semibold uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="training">Training</button>
+            <button class="filter-btn px-5 py-2 text-xs font-body font-semibold uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="demonstration">Demonstration</button>
+            <button class="filter-btn px-5 py-2 text-xs font-body font-semibold uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="community">Community</button>
+            <button class="filter-btn px-5 py-2 text-xs font-body font-semibold uppercase tracking-wider border border-outline-variant text-on-surface-variant hover:border-primary transition-colors" data-filter="grounds">Grounds</button>
+        </div>
+    </div>
+</header>
+
+<!-- Gallery count -->
+<div class="px-margin-mobile md:px-margin-desktop py-5 border-b border-outline-variant/40">
+    <p id="count" class="text-xs font-body font-semibold uppercase tracking-widest text-on-surface-variant"></p>
+</div>
+
+<!-- Masonry Gallery -->
+<main class="px-margin-mobile md:px-margin-desktop py-10">
+    <div id="gallery" class="masonry">
+
+        <!-- =====================================================
+             HOW TO ADD MORE PHOTOS:
+             Copy any <button> block below, update these three things:
+               1. data-category: one of: training / demonstration / community / grounds
+               2. src on the <img>: path to to your image in assets/
+               3. alt text: a plain description of what's in the photo
+             The rest handles itself automatically.
+        ====================================================== -->
+
+        <button class="masonry-item gallery-item group relative overflow-hidden bg-surface-container w-full cursor-zoom-in"
+                data-category="training"
+                data-caption="Students in the courtyard, morning forms practice."
+                data-full="assets/49128.jpg">
+            <img class="gallery-img w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+                 src="assets/49128.jpg"
+                 loading="lazy" decoding="async"
+                 alt="Young Shaolin students pose in martial arts stances in the courtyard, some in yellow uniforms and some in white, with the temple buildings behind them."/>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end p-4">
+                <span class="text-white text-xs font-body font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Training</span>
+            </div>
+        </button>
+
+        <button class="masonry-item gallery-item group relative overflow-hidden bg-surface-container w-full cursor-zoom-in"
+                data-category="demonstration"
+                data-caption="Staff-form line drill at the entrance gate."
+                data-full="assets/49130.jpg">
+            <img class="gallery-img w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+                 src="assets/49130.jpg"
+                 loading="lazy" decoding="async"
+                 alt="Disciples in white uniforms perform a synchronized staff-form drill at the centre's main gateway."/>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end p-4">
+                <span class="text-white text-xs font-body font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Demonstration</span>
+            </div>
+        </button>
+
+        <button class="masonry-item gallery-item group relative overflow-hidden bg-surface-container w-full cursor-zoom-in"
+                data-category="grounds"
+                data-caption="Main hall and courtyard, Ngwerere, Lusaka."
+                data-full="assets/49127.jpg">
+            <img class="gallery-img w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+                 src="assets/49127.jpg"
+                 loading="lazy" decoding="async"
+                 alt="Wide view of the Shaolin Temple Cultural Centre's main hall, red and gold Chinese-style architecture with a statue in the forecourt."/>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end p-4">
+                <span class="text-white text-xs font-body font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Grounds</span>
+            </div>
+        </button>
+
+        <!-- Placeholder slots: swap in real photos as you gather them from the archive -->
+        <div class="masonry-item gallery-item bg-surface-container-high w-full aspect-square flex items-center justify-center" data-category="training">
+            <div class="text-center p-6">
+                <span class="material-symbols-outlined text-[32px] text-on-surface-variant/30 block mb-2">add_photo_alternate</span>
+                <p class="text-xs text-on-surface-variant/50 font-body uppercase tracking-wider">Add Photo</p>
+            </div>
+        </div>
+        <div class="masonry-item gallery-item bg-surface-container-high w-full aspect-square flex items-center justify-center" data-category="community">
+            <div class="text-center p-6">
+                <span class="material-symbols-outlined text-[32px] text-on-surface-variant/30 block mb-2">add_photo_alternate</span>
+                <p class="text-xs text-on-surface-variant/50 font-body uppercase tracking-wider">Add Photo</p>
+            </div>
+        </div>
+        <div class="masonry-item gallery-item bg-surface-container-high w-full aspect-[4/3] flex items-center justify-center" data-category="demonstration">
+            <div class="text-center p-6">
+                <span class="material-symbols-outlined text-[32px] text-on-surface-variant/30 block mb-2">add_photo_alternate</span>
+                <p class="text-xs text-on-surface-variant/50 font-body uppercase tracking-wider">Add Photo</p>
+            </div>
+        </div>
+        <div class="masonry-item gallery-item bg-surface-container-high w-full aspect-square flex items-center justify-center" data-category="grounds">
+            <div class="text-center p-6">
+                <span class="material-symbols-outlined text-[32px] text-on-surface-variant/30 block mb-2">add_photo_alternate</span>
+                <p class="text-xs text-on-surface-variant/50 font-body uppercase tracking-wider">Add Photo</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Empty state shown when a filter has no results yet -->
+    <div id="empty-state" class="hidden text-center py-24">
+        <span class="material-symbols-outlined text-[48px] text-on-surface-variant/30 block mb-4">photo_library</span>
+        <p class="text-on-surface-variant font-body">No photos in this category yet.</p>
+    </div>
+</main>
+
+<!-- Follow CTA -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 bg-surface-container-high border-t border-outline-variant/40 text-center">
+    <p class="text-xs font-body font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-3">More on Social Media</p>
+    <h2 class="font-display text-[28px] md:text-[36px] font-bold text-primary mb-8">Follow the centre for regular updates</h2>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://www.instagram.com/shaolintemplezambia" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-on-primary text-xs font-body font-semibold uppercase tracking-widest hover:opacity-85 transition-opacity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+        </a>
+        <a href="https://www.tiktok.com/@zambiashaolintemple" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-primary text-primary text-xs font-body font-semibold uppercase tracking-widest hover:bg-surface-container transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+            TikTok
+        </a>
+        <a href="https://www.facebook.com/p/%E8%B5%9E%E6%AF%94%E4%BA%9A%E5%B0%91%E6%9E%97%E5%AF%BA-zambia-shaolin-temple-100064183590668/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-primary text-primary text-xs font-body font-semibold uppercase tracking-widest hover:bg-surface-container transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+        </a>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-50 bg-black/95 items-center justify-center p-4 md:p-8" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button id="lightbox-close" class="absolute top-5 right-5 text-white/60 hover:text-white transition-colors z-10" aria-label="Close">
+        <span class="material-symbols-outlined text-[40px]">close</span>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors z-10" aria-label="Previous photo">
+        <span class="material-symbols-outlined text-[40px]">chevron_left</span>
+    </button>
+    <button id="lightbox-next" class="absolute right-16 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors z-10" aria-label="Next photo">
+        <span class="material-symbols-outlined text-[40px]">chevron_right</span>
+    </button>
+    <div class="flex flex-col items-center justify-center w-full h-full gap-4">
+        <img id="lightbox-img" class="max-w-full max-h-[82vh] object-contain" src="" alt=""/>
+        <p id="lightbox-caption" class="text-white/70 text-sm font-body text-center max-w-lg"></p>
+        <p id="lightbox-counter" class="text-white/40 text-xs font-body uppercase tracking-widest"></p>
+    </div>
+</div>
+
+<script>
+    // State───────────────────────────────────────────────────────
+    let currentFilter = 'all';
+    let visibleItems = [];
+    let currentIndex = 0;
+
+    // Lazy-load fade-in───────────────────────────────────────────
+    document.querySelectorAll('.gallery-img').forEach(img => {
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+        }
+    });
+
+    // Filtering───────────────────────────────────────────────────
+    function applyFilter(filter) {
+        currentFilter = filter;
+        const allItems = document.querySelectorAll('.gallery-item');
+        visibleItems = [];
+
+        allItems.forEach(item => {
+            const cat = item.dataset.category;
+            const show = filter === 'all' || cat === filter;
+            item.style.display = show ? '' : 'none';
+            if (show && item.dataset.full) visibleItems.push(item);
+        });
+
+        // Update count
+        const photoCount = visibleItems.length;
+        document.getElementById('count').textContent =
+            photoCount === 0 ? 'No photos yet in this category'
+            : photoCount === 1 ? '1 photo'
+            : `${photoCount} photos`;
+
+        // Empty state
+        document.getElementById('empty-state').classList.toggle('hidden', photoCount > 0);
+        document.getElementById('gallery').style.display = photoCount === 0 ? 'none' : '';
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilter(btn.dataset.filter);
+        });
+    });
+
+    // Run on load
+    applyFilter('all');
+
+    // Lightbox────────────────────────────────────────────────────
+    const lightbox   = document.getElementById('lightbox');
+    const lbImg      = document.getElementById('lightbox-img');
+    const lbCaption  = document.getElementById('lightbox-caption');
+    const lbCounter  = document.getElementById('lightbox-counter');
+
+    function openLightbox(index) {
+        currentIndex = index;
+        const item = visibleItems[index];
+        lbImg.src = item.dataset.full;
+        lbImg.alt = item.querySelector('img')?.alt || '';
+        lbCaption.textContent = item.dataset.caption || '';
+        lbCounter.textContent = `${index + 1} / ${visibleItems.length}`;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+    }
+
+    function navigate(dir) {
+        currentIndex = (currentIndex + dir + visibleItems.length) % visibleItems.length;
+        openLightbox(currentIndex);
+    }
+
+    document.querySelectorAll('.gallery-item').forEach((item, i) => {
+        item.addEventListener('click', () => {
+            if (!item.dataset.full) return;
+            // Index within currently visible items only
+            const idx = visibleItems.indexOf(item);
+            if (idx !== -1) openLightbox(idx);
+        });
+    });
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lightbox-next').addEventListener('click', () => navigate(1));
+
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    // Keyboard nav
+    document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') navigate(1);
+        if (e.key === 'ArrowLeft') navigate(-1);
+    });
+</script>
+
+</body>
+</html>
